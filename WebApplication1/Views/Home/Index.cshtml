@@ -1,0 +1,21 @@
+﻿@model UserInfoDTO
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container mt-3">
+    <h2>فرم ثبت نام</h2>
+    <form  asp-controller="Home" asp-action="Index" method="post">
+        <div class="mb-3 mt-3">
+            <label  asp-for="Name">نام:</label>
+            <input type="text" asp-for="Name" class="form-control" >
+        </div>
+        <div class="mb-3">
+            <label asp-for="Family">نام خانوادگی:</label>
+            <input type="text" asp-for="Family" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">ثبت </button>
+    </form>
+</div>

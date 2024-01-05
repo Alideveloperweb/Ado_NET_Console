@@ -1,0 +1,31 @@
+﻿@model List<UserInfoDTO>
+
+<div class="container mt-3">
+    <h2>کاربران</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>تنظیمات</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <th>@user.Id</th>
+                    <td>@user.Name</td>
+                    <td>@user.Family</td>
+                    <td><a href="/Home/Delete/@user.Id" style="margin:30px 30px" >حذف</a>
+                        <a href="/Home/EditUser/@user.Id">ویرایش</a>
+                    </td>
+              
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
